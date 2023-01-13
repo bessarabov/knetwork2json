@@ -1,1 +1,1 @@
-docker build -t tmp .
+docker build -t knetwork2json .
