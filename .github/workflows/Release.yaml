@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build docker image
-      run: docker build . --tag bessarabov/knetwork2json:${{ github.ref_name }}
+      run: cd code/; docker build . --tag bessarabov/knetwork2json:${{ github.ref_name }}
 
     - name: Push docker image
       run: docker push bessarabov/knetwork2json:${{ github.ref_name }}
